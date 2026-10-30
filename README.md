@@ -45,3 +45,7 @@ Abrir `http://localhost:8000/`. Hay proveedores que bloquean solicitudes automat
 - Datos de Yahoo pueden presentar monedas heterogéneas en ADRs. El código evita calcular FCF yield cuando la moneda del FCF no coincide con la moneda de cotización/valor bursátil.
 - Los titulares se clasifican por palabras clave; jamás asumir causalidad ni validez económica por la etiqueta. Leer las fuentes enlazadas.
 - La actualización de la página funciona desde GitHub Actions **después** de configurar y publicar el repositorio. La tarea de correo semanal es separada; el código **no envía correos** y no contiene tokens ni contraseñas.
+
+## Aprende finanzas y ChatGPT
+
+El menú **Aprende finanzas** contiene un glosario contextual. Haz clic en **ⓘ Entender indicador** dentro de Empresas o Riesgo para abrir una explicación. El botón **Preguntar a ChatGPT** abre una consulta contextual con el valor disponible y la compañía, sin API ni claves. ChatGPT puede requerir iniciar sesión. **No es un chatbot embebido en la página**. No subas claves ni datos privados a GitHub Pages.
