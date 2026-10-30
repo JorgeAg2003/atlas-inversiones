@@ -48,6 +48,26 @@ let active=null;
 function ticker(){return document.querySelector('#company-tabs .active')?.dataset.company||document.querySelector('#academy-company')?.value||'TSM'}
 function read(id,t){const m=window.atlasEducationState?.()?.data?.symbols?.[t]?.metrics;const v=m?.[id];if(typeof v==='number'&&Number.isFinite(v)){if(['operating_margin','revenue_growth','roe','fcf_yield'].includes(id))return (v*100).toFixed(1)+'%';if(id==='debt_to_equity_pct')return v.toFixed(1)+'%';if(['forward_pe','trailing_pe'].includes(id))return v.toFixed(1)+'×';return v.toLocaleString('es-MX')+' '+(m.financial_currency||'')}const r={'volatility':'risk-vol','var95':'risk-var','es95':'risk-es','drawdown':'risk-dd'}[id];return r?document.getElementById(r)?.textContent:'—'}
 function numericalReading(id,t){
+ 
+ if (t === 'cartera') {
+   const value = read(id, t);
+
+   if (!value || value === '—') {
+     return 'Todavía no hay datos suficientes para interpretar este indicador.';
+   }
+
+   const descriptions = {
+     volatility: 'Mide la intensidad de las fluctuaciones históricas, no una pérdida segura.',
+     var95: 'Es un umbral de pérdida diaria superado aproximadamente el 5% de los días históricos.',
+     es95: 'Representa la pérdida promedio dentro del 5% de días más desfavorables.',
+     drawdown: 'Es la mayor caída histórica desde un máximo hasta un mínimo posterior.'
+   };
+
+   if (descriptions[id]) {
+     return `El tablero muestra ${value}. ${descriptions[id]} No es una predicción de pérdidas futuras.`;
+   }
+ }
+
  const m=window.atlasEducationState?.()?.data?.symbols?.[t]?.metrics||{};
  const x=m[id];
  if(typeof x!=='number'||!Number.isFinite(x))return 'El proveedor todavía no proporciona un dato numérico verificable. No conviene calificarlo como bueno o malo.';
