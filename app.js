@@ -1,4 +1,5 @@
 'use strict';
+window.atlasEducationState=()=>state;
 const CORE=['TSM','MSFT','V','COST'];
 const WATCH=['ETN','ASML','CRH','SNOW','AMX'];
 const WEIGHTS_DEFAULT={TSM:30,MSFT:30,V:25,COST:15};
