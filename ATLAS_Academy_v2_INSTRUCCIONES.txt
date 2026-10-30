@@ -1,0 +1,26 @@
+ATLAS ACADEMY v2 — explicaciones más detalladas
+
+Archivos incluidos:
+- education.js (sustituye al existente)
+- education.css (sustituye al existente)
+
+No modificar data/, scripts/, .github/, app.js, index.html ni styles.css.
+
+1. Abre https://github.com/JorgeAg2003/atlas-inversiones
+2. En el menú desplegable de rama (main), escribe feature/atlas-academy-v2 y selecciona "Create branch from main".
+3. Mantén seleccionada feature/atlas-academy-v2.
+4. Selecciona Add file > Upload files y arrastra education.js y education.css descomprimidos.
+5. Confirma la sustitución de los archivos existentes y pulsa Commit changes.
+6. Ve a Pull requests > New pull request.
+7. Base: main / Compare: feature/atlas-academy-v2; crea el PR y revisa sus cambios.
+8. Una vez aprobado, haz Merge pull request. GitHub Actions publicará automáticamente.
+
+Qué cambia:
+- Elimina "Lectura del resultado: Lectura orientativa".
+- Interpretaciones con valores concretos de cada empresa.
+- Ejemplos numéricos, fórmula, significado para inversionista, señales positivas/negativas.
+- Advertencias sobre limitaciones, periodo, divisas y comparabilidad.
+- Riesgo explicado como pérdidas históricas en pesos, no como predicciones.
+- Consultas a ChatGPT con contexto más amplio.
+
+Nota: no cambia las cotizaciones, los modelos de riesgo ni el calendario de actualización.

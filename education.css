@@ -6,3 +6,22 @@
 @media(max-width:600px){.academy-signal-grid{grid-template-columns:1fr}}
 
 .academy-reading{border-left:3px solid #64d5cd;background:#15303e;padding:10px 14px;border-radius:4px;color:#cbe8eb}
+
+/* ATLAS Academy: explicaciones profundas y lectura sin etiquetas duplicadas */
+.academy-dialog-detailed{max-width:810px;padding:29px 32px;line-height:1.58}
+.academy-dialog-detailed .academy-current{display:flex;flex-direction:column;gap:4px;margin:18px 0 12px;padding:16px 19px}
+.academy-dialog-detailed .academy-current b{margin:0;font-size:25px}
+.academy-current-label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#9bd6d5;font-weight:800}
+.academy-verdict{background:#163942;border-left:3px solid #64d5cd;padding:17px 19px;border-radius:9px;margin:0 0 16px}
+.academy-verdict h3{font:750 17px Manrope,Arial,sans-serif!important;color:#ebffff!important;margin:6px 0!important}
+.academy-verdict p{font-size:13px;margin:6px 0 0;color:#d8e8ef;line-height:1.7}
+.academy-lesson-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}
+.academy-lesson{background:#172e41;border:1px solid #345267;border-radius:11px;padding:16px}
+.academy-lesson h3,.academy-focus h3,.academy-caution h3{margin:0 0 9px!important;font-size:13px!important;color:#abede6!important}
+.academy-lesson p,.academy-focus p,.academy-caution p{margin:0;font-size:12.5px;line-height:1.75;color:#c9dbe4}
+.academy-focus{background:#122e39;border:1px solid #30606a;border-radius:11px;padding:15px 18px;margin:14px 0}
+.academy-caution{background:#282e3a;border:1px solid #77614f;border-radius:11px;padding:15px 18px;margin-top:15px}
+.academy-caution h3{color:#f6c88d!important}
+.academy-dialog-detailed .academy-signal-grid h3{font-size:13px!important}
+.academy-dialog-detailed .academy-signal-grid p{line-height:1.72}
+@media(max-width:680px){.academy-lesson-grid{grid-template-columns:1fr}.academy-dialog-detailed{padding:20px 17px}.academy-dialog-detailed .academy-current b{font-size:23px}}
